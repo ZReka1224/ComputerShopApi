@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ComputerShopApi.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialDb : Migration
+    public partial class initialDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -15,7 +15,7 @@ namespace ComputerShopApi.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "Osistems",
+                name: "Osystems",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "char(36)", maxLength: 36, nullable: false, collation: "ascii_general_ci"),
@@ -27,7 +27,7 @@ namespace ComputerShopApi.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Osistems", x => x.Id);
+                    table.PrimaryKey("PK_Osystems", x => x.Id);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
         }
@@ -36,7 +36,7 @@ namespace ComputerShopApi.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Osistems");
+                name: "Osystems");
         }
     }
 }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ComputerShopApi.Migrations
 {
     [DbContext(typeof(ComputerShopDbContext))]
-    [Migration("20261012085425_InitialDb")]
-    partial class InitialDb
+    [Migration("20261019063942_initialDb")]
+    partial class initialDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,7 +47,7 @@ namespace ComputerShopApi.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Osistems");
+                    b.ToTable("Osystems");
                 });
 #pragma warning restore 612, 618
         }

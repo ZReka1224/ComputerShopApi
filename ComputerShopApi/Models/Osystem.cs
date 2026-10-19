@@ -10,6 +10,7 @@ namespace ComputerShopApi.Models
         public string Name { get; set; }
         public int Version { get; set; }
         public DateTime Registration {  get; set; }
-        public DateTime UpDateTime { get; set; }
+        public DateTime UpDateTime { get; set; } 
+        public ICollection<Computer> Computers { get; set; }
     }
 }
